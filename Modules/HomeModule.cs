@@ -20,14 +20,14 @@ namespace RockPaperScissorsGame
         return View["One-Player.cshtml"];
       };
 
-      Post["/new-game"] = _ => {
+      Post["/two-player/result"] = _ => {
         RockPaperScissors newGame = new RockPaperScissors();
         string result = newGame.CheckGameOutcome(Request.Form["Player1-Selection"],
                                           Request.Form["Player2-Selection"]);
         return View["Winner.cshtml", result];
       };
 
-      Post["/new-game"] = _ => {
+      Post["/one-player/result"] = _ => {
         RockPaperScissors newGame = new RockPaperScissors();
         string rndmOption = newGame.ComputerChooses();
         string result = newGame.CheckGameOutcome(Request.Form["Player1-Selection"], rndmOption);

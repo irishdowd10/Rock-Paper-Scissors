@@ -4,22 +4,22 @@
 
 <h3>Please Select Either Rock, Paper or Scissors to Play</h3>
 
-<form action="/new-game" method="post">
+<form action="/two-player/result" method="post">
+  <div id="firstplayer">
+    <label for="player1-Selection">Player 1: </label>
+    <select class="form-control" name="player1-Selection">
+      <option class="options" value="Rock">Rock</option>
+      <option class="options" value="Paper">Paper</option>
+      <option class="options" value="Scissors">Scissors</option>
+    </select><br>
+    <button id="first" type="button" name="button">select</button>
+  </div>
 
-  <label for="player1-Selection">Player 1: </label>
-  <select class="form-control" name="player1-Selection">
+  <label for="player2-Selection">Player 2: </label>
+  <select class="form-control" name="player2-Selection">
     <option value="Rock">Rock</option>
     <option value="Paper">Paper</option>
     <option value="Scissors">Scissors</option>
   </select><br>
-
-  <label for="player2-Selection">Player 2: </label>
-  <select class="form-control" name="player2-Selection">
-    <option name="John" value="Rock">Rock</option>
-    <option name="Jordan" value="Paper">Paper</option>
-    <option name="Cat" value="Scissors">Scissors</option>
-  </select><br>
-
   <button type="submit" name="button">Battle!</button>
-
 </form>
