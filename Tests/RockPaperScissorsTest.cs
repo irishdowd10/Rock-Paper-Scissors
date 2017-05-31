@@ -49,7 +49,7 @@ namespace RockPaperScissorsTester
       //Assert
       Assert.Equal("Scissors", result);
     }
-    
+
     [Fact]
     public void PaperBeatsRock_CheckGameOutcome()
     {
@@ -60,6 +60,18 @@ namespace RockPaperScissorsTester
       RockPaperScissors newGame = new RockPaperScissors();
       //act
       string result = newGame.CheckGameOutcome(player1Selection, player2Selection);
+      //Assert
+      Assert.Equal("Paper", result);
+    }
+
+    [Fact]
+    public void RandomOption_ComputerChooses()
+    {
+      Console.WriteLine("RandomOption");
+      //arrange
+      RockPaperScissors newGame = new RockPaperScissors();
+      //act
+      string result = newGame.ComputerChooses();
       //Assert
       Assert.Equal("Paper", result);
     }

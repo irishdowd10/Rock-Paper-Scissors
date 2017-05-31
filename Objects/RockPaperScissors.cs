@@ -20,10 +20,18 @@ namespace RockPaperScissorsGame.Objects
       {
         return "Paper";
       }
-      else  
+      else
       {
         return "Draw";
       }
+    }
+
+    public string ComputerChooses()
+    {
+      string[] options = new string[] {"Rock", "Paper", "Scissors"};
+      Random rndm = new Random();
+      int rndmInt = rndm.Next(0,3);
+      return options[rndmInt];
     }
   }
 }
