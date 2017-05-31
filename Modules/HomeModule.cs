@@ -29,9 +29,8 @@ namespace RockPaperScissorsGame
 
       Post["/new-game"] = _ => {
         RockPaperScissors newGame = new RockPaperScissors();
-        rndmOption = ComputerChooses();
-        string result = newGame.CheckGameOutcome(Request.Form["Player1-Selection"],
-                                          rndmOption]);
+        string rndmOption = newGame.ComputerChooses();
+        string result = newGame.CheckGameOutcome(Request.Form["Player1-Selection"], rndmOption);
         return View["Winner.cshtml", result];
       };
     }
