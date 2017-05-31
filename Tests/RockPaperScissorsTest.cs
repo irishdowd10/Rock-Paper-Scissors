@@ -21,18 +21,48 @@ namespace RockPaperScissorsTester
       //Assert
       Assert.Equal("Draw", result);
     }
+
     [Fact]
     public void RockBeatsScissors_CheckGameOutcome()
     {
       Console.WriteLine("RockBeatsScissors");
       //arrange
-      string player1Selection = "Rock";
-      string player2Selection = "Scissors";
+      string player1Selection = "Scissors";
+      string player2Selection = "Rock";
       RockPaperScissors newGame = new RockPaperScissors();
       //act
       string result = newGame.CheckGameOutcome(player1Selection, player2Selection);
       //Assert
-      Assert.Equal(player1Selection, result);
+      Assert.Equal("Rock", result);
     }
+
+    [Fact]
+    public void ScissorsBeatsPaper_CheckGameOutcome()
+    {
+      Console.WriteLine("ScissorsBeatsPaper");
+      //arrange
+      string player1Selection = "Scissors";
+      string player2Selection = "Paper";
+      RockPaperScissors newGame = new RockPaperScissors();
+      //act
+      string result = newGame.CheckGameOutcome(player1Selection, player2Selection);
+      //Assert
+      Assert.Equal("Scissors", result);
+    }
+    
+    [Fact]
+    public void PaperBeatsRock_CheckGameOutcome()
+    {
+      Console.WriteLine("PaperBeatsRock");
+      //arrange
+      string player1Selection = "Paper";
+      string player2Selection = "Rock";
+      RockPaperScissors newGame = new RockPaperScissors();
+      //act
+      string result = newGame.CheckGameOutcome(player1Selection, player2Selection);
+      //Assert
+      Assert.Equal("Paper", result);
+    }
+
   }
 }

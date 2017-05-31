@@ -8,17 +8,21 @@ namespace RockPaperScissorsGame.Objects
 
     public string CheckGameOutcome(string player1, string player2)
     {
-      if (player1 == "Rock" && player2 == "Scissors")
+      if ((player1 == "Rock" && player2 == "Scissors") || (player1 == "Scissors" && player2 == "Rock"))
       {
-        return player1;
+        return "Rock";
       }
-      else if (player1 == player2)
+      else if ((player1 == "Paper" && player2 == "Scissors") || (player1 == "Scissors" && player2 == "Paper"))
+      {
+        return "Scissors";
+      }
+      else if ((player1 == "Paper" && player2 == "Rock") ||( player1 == "Rock" && player2 == "Paper"))
+      {
+        return "Paper";
+      }
+      else  
       {
         return "Draw";
-      }
-      else
-      {
-        return "John";
       }
     }
   }
